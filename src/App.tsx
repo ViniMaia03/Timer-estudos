@@ -1,10 +1,14 @@
 import React from "react"
+import Botao from "./components/Botao"
+import Formulario from "./components/Forms"
+import Lista from "./components/Lista"
 
 export default function App() {
     return (
         <>
             <div className="App">
-                <h1> Olá, mundo! </h1>
+                <Formulario />
+                <Lista />
             </div>
         </>
     )
