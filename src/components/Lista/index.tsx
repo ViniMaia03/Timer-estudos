@@ -21,7 +21,7 @@ function Lista() {
                 <h2> Estudos do Dia: </h2>
                 <ul>
                     {tarefas.map((item, index) => (
-                       <Item {...item} />
+                       <Item key={index} {...item} />
                     ))}
                 </ul>
             </aside>
