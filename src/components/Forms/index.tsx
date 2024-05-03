@@ -9,10 +9,14 @@ class Formulario extends React.Component {
         tempo: "00:00"
     }
 
+    addTarefa(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+    }
+
     render() {
         return(
             <>
-                <form className={ style.novaTarefa }>
+                <form className={ style.novaTarefa } onSubmit={this.addTarefa.bind(this)}>
                     <div className={ style.inputContainer }>
                         <label htmlFor="tarefa"> Adicione seu novo estudo: </label>
                         <input type="text" name="tarefa" id="tarefa" value={this.state.tarefa} onChange={e=> this.setState({...this.state, tarefa: e.target.value})} placeholder="O que você quer estudar?" required />
